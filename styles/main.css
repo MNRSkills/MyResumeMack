@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  --body-bg: #f4f4f9;
+  --font-color-p: #353a47;
+  --sub-header: #048a81;
+  --main-header: #ffa630;
+  --button-hover: #788475;
+}
+
+header {
+  background-color: var(--main-header);
+  color: var(--font-color-p);
+}
+
+section {
+}
+
+footer {
+}
