@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   padding: 0;
   margin: 0;
   --body-bg: #f4f4f9;
@@ -10,11 +9,39 @@ body {
 }
 
 header {
+  height: 100vh;
   background-color: var(--main-header);
   color: var(--font-color-p);
+  margin: auto;
 }
 
-section {
+header .hero-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .hero-bg h3 {
+  margin: auto;
+  text-align: center;
+}
+
+header .hero-bg p {
+  max-width: 80%;
+  line-height: 40px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+section .skills-certs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 footer {
