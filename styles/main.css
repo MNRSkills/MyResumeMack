@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-size: 18px;
   --body-bg: #f4f4f9;
   --font-color-p: #353a47;
   --sub-header: #048a81;
@@ -8,8 +9,10 @@ body {
   --button-hover: #788475;
 }
 
+body h3 {
+  color: var(--sub-header);
+}
 header {
-  height: 100vh;
   background-color: var(--main-header);
   color: var(--font-color-p);
   margin: auto;
@@ -38,10 +41,156 @@ nav {
   padding: 20px 20px;
 }
 
-section .skills-certs {
+.skills-certs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.skills-certs li {
+  width: calc(375px - 300px);
+  margin: 0 auto;
+}
+
+.skills-certs img {
+  width: calc(375px - 300px);
+  margin: 0 auto;
+}
+
+.skills-certs div {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-certs h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.skills-certs p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--font-color-p);
+}
+
+.skills-certs ul {
+  list-style: none;
+  padding: 20px;
+  background: var(--body-bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-certs ul li {
+  font-size: 1.1rem;
+  color: #444;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.skills-certs ul li:last-child {
+  border-bottom: none;
+}
+
+/* Experience Section */
+.experience-work {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Section Title (h1) */
+.experience-work h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--button-hover);
+  padding-bottom: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Experience Items */
+.experience-work div {
+  background: var(--body-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--button-hover); /* Accent border */
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.experience-list h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  /* color: #333; */
+}
+
+.experience-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-list ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.experience-list ul li:last-child {
+  border-bottom: none;
+}
+
+.experience-list ul li p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 📌 Responsive Grid for Larger Screens */
+@media (min-width: 768px) {
+  .experience-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* @media (min-width: 1024px) {
+  .experience-list {
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+} */
+
+/* Responsive Design for Larger Screens need to be looked at again*/
+@media (min-width: 760px) {
+  header {
+    height: 100vh;
+  }
+  .skills-certs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .skills-certs ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 footer {
